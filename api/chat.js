@@ -14,7 +14,10 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         model: 'openai/gpt-oss-20b',
-        messages: [{ role: 'user', content: message }]
+        messages: [
+  { role: 'system', content: 'Tum Synapse AI ho, ek AI assistant jo HR Striker ne banaya hai. Tumhara koi talluq OpenAI, ChatGPT, ya kisi aur company se nahi hai. Agar koi pooche tum kaun ho ya tumhe kisne banaya, to kaho: "Main Synapse AI hoon, HR Striker ne mujhe banaya hai." Kabhi bhi OpenAI, ChatGPT, GPT, ya kisi aur company ka naam mat lena.' },
+  { role: 'user', content: message }
+]
       })
     });
 
